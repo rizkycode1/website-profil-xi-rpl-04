@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - XI RPL 04</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #050505, #0b2e1b, #111);
+      min-height: 100vh;
+      color: white;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #35d66f;
+    }
+
+    .logo {
+      color: #7cff9b;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #35d66f;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
+
+    .icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 45px;
+      color: #7cff9b;
+      text-shadow: 0 0 15px #00ff66;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid #35d66f;
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0, 255, 100, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 255, 100, 0.25);
+    }
+
+    .card h2 {
+      color: #7cff9b;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      border-top: 1px solid #35d66f;
+      color: #bbb;
+    }
+
+    footer span {
+      color: #35d66f;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">🐬 XI RPL 04</div>
+
+    <ul>
+      <li><a href="profil.html" class="active">Profil</a></li>
+      <li><a href="anggota.html">Anggota</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="icon">💻</div>
+    <h1>Profil Kelas XI RPL 04</h1>
+    <p>Rekayasa Perangkat Lunak • SMKN 1 Garut</p>
+  </section>
+
+  <section class="content">
+
+    <div class="cards">
+
+      <div class="card">
+        <h2>🏫 Sekolah</h2>
+        <p>
+          SMK Negeri 1 Garut
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>💻 Jurusan</h2>
+        <p>
+          Rekayasa Perangkat Lunak (RPL)
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>🚀 Kelas</h2>
+        <p>
+          XI RPL 04
+        </p>
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top: 25px;">
+      <h2>📖 Tentang Kelas</h2>
+
+      <p>
+        Kami adalah siswa kelas XI Rekayasa Perangkat Lunak yang
+        mempelajari pengembangan perangkat lunak, pemrograman,
+        desain website, database, dan teknologi informasi.
+      </p>
+
+      <br>
+
+      <p>
+        Kami berusaha menjadi kelas yang disiplin, kreatif,
+        bertanggung jawab, serta mampu bekerja sama dalam
+        mengembangkan berbagai proyek teknologi.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    🐬 <span>XI RPL 04</span> | Teamwork • Creativity • Technology
+  </footer>
+
+</body>
+</html>
