@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Anggota Tim XI RPL 04</title>
+  <title>Anggota - XI RPL 04</title>
 
   <style>
     * {
@@ -15,25 +15,55 @@
     }
 
     body {
-      background: linear-gradient(135deg, #000000, #123d25, #ffffff);
+      background: linear-gradient(135deg, #000000, #123d25, #111);
       min-height: 100vh;
-      color: #ffffff;
-      padding: 40px 20px;
+      color: white;
+      padding-bottom: 30px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #35d66f;
     }
 
-    /* Header */
+    .logo {
+      color: #7cff9b;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #35d66f;
+    }
+
     .header {
       text-align: center;
-      margin-bottom: 40px;
+      padding: 70px 20px 40px;
     }
 
     .dolphin {
-      font-size: 70px;
+      font-size: 65px;
       animation: swim 2s infinite alternate;
       display: inline-block;
     }
@@ -57,12 +87,14 @@
 
     .subtitle {
       margin-top: 10px;
-      color: #eeeeee;
+      color: #ddd;
       font-size: 18px;
     }
 
-    /* Daftar anggota */
     .anggota {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
@@ -79,19 +111,13 @@
 
     .card:hover {
       transform: translateY(-10px);
-      background: #ffffff;
-      color: #000000;
-      box-shadow: 0 15px 30px rgba(0, 255, 100, 0.4);
-    }
-
-    .card:hover strong {
-      color: #159447;
+      box-shadow: 0 15px 30px rgba(0, 255, 100, 0.35);
     }
 
     .nomor {
       display: inline-block;
       background: #35d66f;
-      color: #000000;
+      color: #000;
       font-weight: bold;
       padding: 8px 13px;
       border-radius: 50%;
@@ -112,20 +138,15 @@
     .card p {
       margin-top: 15px;
       line-height: 1.7;
-      color: #dddddd;
+      color: #ddd;
     }
 
-    .card:hover p {
-      color: #333333;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       margin-top: 45px;
       padding: 20px;
       border-top: 1px solid #35d66f;
-      color: #dddddd;
+      color: #ddd;
     }
 
     footer span {
@@ -133,8 +154,16 @@
       font-weight: bold;
     }
 
-    /* Tampilan HP */
     @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+      }
+
       .anggota {
         grid-template-columns: 1fr;
       }
@@ -142,97 +171,97 @@
       h1 {
         font-size: 30px;
       }
-
-      .dolphin {
-        font-size: 55px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <nav>
+    <div class="logo">🐬 XI RPL 04</div>
 
-    <header class="header">
-      <div class="dolphin">🐬</div>
+    <ul>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="anggota.html" class="active">Anggota</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
 
-      <h1>Anggota Tim XI RPL 04</h1>
+  <header class="header">
+    <div class="dolphin">🐬</div>
 
-      <p class="subtitle">
-        Kenalan dengan tim kami 🚀
+    <h1>Anggota Tim XI RPL 04</h1>
+
+    <p class="subtitle">
+      Kenalan dengan tim kami 🚀
+    </p>
+  </header>
+
+  <section class="anggota">
+
+    <div class="card">
+      <div class="nomor">01</div>
+
+      <h2>
+        <strong>Rizki</strong>
+        <span class="peran">- Project Manager</span>
+      </h2>
+
+      <p>
+        Bertanggung jawab mengatur dan mengoordinasikan jalannya proyek,
+        membagi tugas kepada anggota, melakukan Code Review,
+        dan melakukan Merge.
       </p>
-    </header>
+    </div>
 
-    <section class="anggota">
+    <div class="card">
+      <div class="nomor">02</div>
 
-      <!-- Rizki -->
-      <div class="card">
-        <div class="nomor">01</div>
+      <h2>
+        <strong>Lubna</strong>
+        <span class="peran">- Developer Profil</span>
+      </h2>
 
-        <h2>
-          <strong>Rizki</strong>
-          <span class="peran">- Project Manager</span>
-        </h2>
+      <p>
+        Bertanggung jawab mengembangkan halaman profil kelas
+        dan memastikan informasi profil dapat ditampilkan
+        dengan baik.
+      </p>
+    </div>
 
-        <p>
-          Bertanggung jawab mengatur dan mengoordinasikan jalannya proyek,
-          membagi tugas kepada anggota, melakukan Code Review, dan melakukan Merge.
-        </p>
-      </div>
+    <div class="card">
+      <div class="nomor">03</div>
 
-      <!-- Lubna -->
-      <div class="card">
-        <div class="nomor">02</div>
+      <h2>
+        <strong>Adzkha</strong>
+        <span class="peran">- Developer Anggota</span>
+      </h2>
 
-        <h2>
-          <strong>Lubna</strong>
-          <span class="peran">- Developer Profil</span>
-        </h2>
+      <p>
+        Bertanggung jawab mengembangkan halaman daftar anggota tim,
+        menampilkan nama, peran, dan informasi singkat setiap anggota.
+      </p>
+    </div>
 
-        <p>
-          Bertanggung jawab mengembangkan halaman profil kelas dan memastikan
-          informasi profil dapat ditampilkan dengan baik.
-        </p>
-      </div>
+    <div class="card">
+      <div class="nomor">04</div>
 
-      <!-- Adzkha -->
-      <div class="card">
-        <div class="nomor">03</div>
+      <h2>
+        <strong>Fajrillah</strong>
+        <span class="peran">- Developer Kontak</span>
+      </h2>
 
-        <h2>
-          <strong>Adzkha</strong>
-          <span class="peran">- Developer Anggota</span>
-        </h2>
+      <p>
+        Bertanggung jawab mengembangkan halaman kontak yang berisi
+        informasi untuk menghubungi tim.
+      </p>
+    </div>
 
-        <p>
-          Bertanggung jawab mengembangkan halaman daftar anggota tim,
-          menampilkan nama, peran, dan informasi singkat setiap anggota.
-        </p>
-      </div>
+  </section>
 
-      <!-- Fajrillah -->
-      <div class="card">
-        <div class="nomor">04</div>
-
-        <h2>
-          <strong>Fajrillah</strong>
-          <span class="peran">- Developer Kontak</span>
-        </h2>
-
-        <p>
-          Bertanggung jawab mengembangkan halaman kontak yang berisi
-          informasi untuk menghubungi tim.
-        </p>
-      </div>
-
-    </section>
-
-    <footer>
-      🐬 <span>XI RPL 04</span> | Teamwork • Creativity • Technology
-    </footer>
-
-  </div>
+  <footer>
+    🐬 <span>XI RPL 04</span> | Teamwork • Creativity • Technology
+  </footer>
 
 </body>
 </html>
